@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar mode="ios">
+      <ion-buttons slot="secondary">
+        <ion-buttons slot="start">
+          <ion-back-button default-href="/login"></ion-back-button>
+        </ion-buttons>
+      </ion-buttons>
+    </ion-toolbar>
+<ion-content>
+  <div class="avatar-container">
+    <ion-avatar class="custom-avatar">
+      <img
+        alt="Silhouette of a person's head"
+        src="https://ionicframework.com/docs/img/demos/avatar.svg"
+      />
+    </ion-avatar>
+    <p class="avatar-label">Tu perfil</p>
+  </div>
+</ion-content>
+
+<style>
+  ion-content {
+    --background: #f5f5f5; /* Fondo claro para toda la página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    max-width: 150px;
+  }
+
+  .custom-avatar {
+    --border-radius: 50%; /* Redondeado perfecto */
+    --size: 100px; /* Tamaño personalizado */
+    border: 4px solid #3b82f6; /* Borde azul */
+    overflow: hidden; /* Asegurar que la imagen no sobresalga */
+    transition: transform 0.3s ease;
+  }
+
+  .custom-avatar:hover {
+    transform: scale(1.1); /* Zoom suave al pasar el cursor */
+  }
+
+  .custom-avatar img {
+    width: 100%; /* Imagen ocupa todo el contenedor */
+    height: 100%;
+    object-fit: cover; /* Escala la imagen correctamente */
+  }
+
+  .avatar-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+  }
+</style>
+</ion-header>

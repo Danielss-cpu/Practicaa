@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar mode="ios">
+      <ion-buttons slot="secondary">
+        <ion-buttons slot="start">
+          <ion-back-button default-href="/login"></ion-back-button>
+        </ion-buttons>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Ejemplo de Toast</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Encabezado Colapsable -->
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Ejemplo de Toast</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Sección de Toast 1 -->
+  <section class="ion-padding">
+    <ion-button id="open-toast-1">Mostrar Toast</ion-button>
+    <ion-toast
+      trigger="open-toast-1"
+      message="Este toast se puede deslizar para cerrarlo"
+      swipeGesture="vertical"
+      position="bottom"
+      positionAnchor="footer"
+    ></ion-toast>
+  </section>
+
+  <!-- Sección de Toast con Icono -->
+  <section class="ion-padding">
+    <ion-button id="open-toast-2">Mostrar Toast con Icono</ion-button>
+    <ion-toast
+      trigger="open-toast-2"
+      message="¡Hola Mundo!"
+      [duration]="3000"
+      icon="globe"
+    ></ion-toast>
+  </section>
+
+  <!-- Pie de página -->
+  <ion-footer id="footer">
+    <ion-toolbar>
+      <ion-title>Pie de página</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+
+  <!-- Sección de Toast Inline -->
+  <section class="ion-padding">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Toast Inline</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <p id="message">
+      Este ejemplo de toast se activa automáticamente cuando se hace clic en el botón.
+    </p>
+
+    <ion-button id="open-inline-toast" expand="block">Mostrar Toast Inline</ion-button>
+    <ion-toast
+      trigger="open-inline-toast"
+      message="Este toast desaparecerá después de 5 segundos"
+      [duration]="5000"
+    ></ion-toast>
+  </section>
+</ion-content>

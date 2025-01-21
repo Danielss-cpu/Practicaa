@@ -1,0 +1,37 @@
+/* Estilos generales */
+ion-content {
+    padding: 10px;
+  }
+  
+  /* Tarjetas */
+  ion-card {
+    margin-bottom: 15px;
+    border: 1px solid #007bff; /* Borde azul */
+    border-radius: 8px;
+  }
+  
+  /* Encabezado de las tarjetas */
+  ion-card-header {
+    background-color: #007bff; /* Azul */
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Contenido de las tarjetas */
+  ion-card-content {
+    padding: 10px;
+  }
+  
+  /* Botones */
+  ion-button {
+    margin: 5px 0;
+    --background: #007bff; /* Azul */
+    --color: white;
+    padding: 8px 20px;
+  }
+  
+  ion-button:hover {
+    --background: #0056b3; /* Efecto hover azul oscuro */
+  }
+  

@@ -1,0 +1,35 @@
+ion-item-divider {
+    background-color: #4CAF50; /* Color verde para los divisores */
+    color: white; /* Texto blanco en los divisores */
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  
+  ion-avatar img {
+    width: 40px; /* Tamaño más pequeño para los avatares */
+    height: 40px;
+    border-radius: 50%; /* Avatar circular */
+  }
+  
+  ion-chip {
+    background-color: #03A9F4; /* Color azul para el chip */
+    color: white; /* Texto blanco dentro del chip */
+    padding: 10px;
+    margin: 5px 0;
+  }
+  
+  ion-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f1f1f1; /* Fondo gris claro para los items */
+  }
+  
+  ion-item ion-label {
+    color: #333; /* Texto oscuro para el label */
+  }
+  
+  ion-content {
+    background-color: #fafafa; /* Fondo gris claro */
+  }
+  

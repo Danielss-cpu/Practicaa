@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/login" text="Volver"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Lista de Juegos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <!-- Lista principal de juegos -->
+  <ion-list class="game-list" inset="true">
+    <ion-item>
+      <ion-label>
+        <ion-icon name="logo-game-controller-b" slot="start" color="primary"></ion-icon>
+        Pokémon Yellow
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="logo-game-controller-b" slot="start" color="secondary"></ion-icon>
+        Mega Man X
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="logo-game-controller-b" slot="start" color="tertiary"></ion-icon>
+        The Legend of Zelda
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="logo-game-controller-b" slot="start" color="warning"></ion-icon>
+        Pac-Man
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="logo-game-controller-b" slot="start" color="success"></ion-icon>
+        Super Mario World
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Nueva lista: Juegos con imágenes -->
+  <ion-list class="image-list" inset="true">
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Pokémon Yellow" />
+      </ion-thumbnail>
+      <ion-label>
+        Pokémon Yellow
+        <p>Un clásico de Game Boy</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Mega Man X" />
+      </ion-thumbnail>
+      <ion-label>
+        Mega Man X
+        <p>Plataformas y acción</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Nueva lista: Juegos destacados con botones -->
+  <ion-list class="featured-list" inset="true">
+    <ion-item>
+      <ion-label>
+        <ion-icon name="star" slot="start" color="warning"></ion-icon>
+        Juego Destacado: Zelda
+      </ion-label>
+      <ion-button slot="end" color="primary">Detalles</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="star" slot="start" color="warning"></ion-icon>
+        Juego Destacado: Mario
+      </ion-label>
+      <ion-button slot="end" color="secondary">Detalles</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<style>
+  ion-content {
+    --background: #f5f5f5; /* Fondo claro */
+    padding: 15px;
+  }
+
+  .game-list,
+  .image-list,
+  .featured-list {
+    --background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  ion-item {
+    --background: transparent;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+  }
+
+  ion-item:last-child {
+    border-bottom: none;
+  }
+
+  ion-item:hover {
+    --background: rgba(0, 0, 0, 0.05);
+  }
+
+  ion-label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  ion-icon {
+    font-size: 1.5rem;
+  }
+
+  ion-thumbnail img {
+    border-radius: 8px;
+  }
+
+  ion-button {
+    font-size: 0.9rem;
+    --padding-start: 12px;
+    --padding-end: 12px;
+    border-radius: 8px;
+    text-transform: capitalize;
+  }
+</style>

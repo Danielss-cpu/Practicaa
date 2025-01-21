@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/login" text="Volver"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Configuración</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Primera lista: Fondo oscuro y texto blanco -->
+  <ion-list lines="full" style="background-color: #1e1e1e; color: white;">
+    <ion-item lines="full" style="--ion-item-background: #2a2a2a;">
+      <ion-label>Opción 1</ion-label>
+      <ion-checkbox slot="end" color="light"></ion-checkbox>
+    </ion-item>
+
+    <ion-item lines="full" style="--ion-item-background: #2a2a2a;">
+      <ion-label>Opción 2</ion-label>
+      <ion-checkbox slot="end" color="light"></ion-checkbox>
+    </ion-item>
+
+    <ion-item lines="full" style="--ion-item-background: #2a2a2a;">
+      <ion-label>Opción 3</ion-label>
+      <ion-checkbox slot="end" color="light"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <!-- Segunda lista: Fondo claro con bordes -->
+  <ion-list lines="inset" style="margin-top: 16px;">
+    <ion-item>
+      <ion-checkbox label-placement="stacked" alignment="start" color="primary">
+        Alineado al inicio
+      </ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox label-placement="stacked" alignment="center" color="primary">
+        Alineado al centro
+      </ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <!-- Tercera lista: Ítems con íconos y botones -->
+  <ion-list lines="none" style="margin-top: 16px;">
+    <ion-item>
+      <ion-checkbox justify="start" color="tertiary">Inicio de la línea</ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox justify="end" color="tertiary">Fin de la línea</ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox justify="space-between" color="tertiary">
+        Espacio entre etiqueta y control
+      </ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>

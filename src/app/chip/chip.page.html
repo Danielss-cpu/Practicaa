@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/login" text="Volver"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Chips Interactivos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="chip-container">
+    <!-- Primer chip con avatar -->
+    <ion-chip color="primary" class="custom-chip">
+      <ion-avatar>
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label>Avatar Chip</ion-label>
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-chip>
+
+    <!-- Segundo chip con ícono -->
+    <ion-chip color="secondary" class="custom-chip">
+      <ion-icon name="pin" slot="start" color="primary"></ion-icon>
+      <ion-label>Icon Chip</ion-label>
+      <ion-icon name="close" slot="end"></ion-icon>
+    </ion-chip>
+
+    <!-- Tercer chip con texto -->
+    <ion-chip color="tertiary" class="custom-chip">
+      <ion-label>Text Chip</ion-label>
+      <ion-icon name="close-circle-outline" slot="end"></ion-icon>
+    </ion-chip>
+
+    <!-- Nuevo chip con estado -->
+    <ion-chip color="success" class="custom-chip">
+      <ion-icon name="checkmark-circle" slot="start" color="light"></ion-icon>
+      <ion-label>Success Chip</ion-label>
+      <ion-icon name="close" slot="end"></ion-icon>
+    </ion-chip>
+
+    <!-- Nuevo chip con imagen personalizada -->
+    <ion-chip color="warning" class="custom-chip">
+      <ion-avatar>
+        <img alt="Custom image" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+      </ion-avatar>
+      <ion-label>Custom Image</ion-label>
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-chip>
+  </div>
+
+  <style>
+    .chip-container {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-chip {
+      --background: linear-gradient(135deg, #3b82f6, #9333ea); /* Gradiente */
+      --color: white;
+      --border-radius: 20px;
+      --padding-start: 12px;
+      --padding-end: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .custom-chip:hover {
+      transform: scale(1.08);
+      --box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    ion-avatar img {
+      border: 2px solid white;
+      border-radius: 50%;
+    }
+
+    ion-icon {
+      font-size: 18px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .custom-chip ion-icon:hover {
+      transform: rotate(15deg);
+      color: #ff5252; /* Rojo vibrante */
+    }
+
+    ion-chip[color="primary"] {
+      --background: linear-gradient(135deg, #3b82f6, #9333ea);
+    }
+
+    ion-chip[color="secondary"] {
+      --background: linear-gradient(135deg, #22c55e, #16a34a);
+    }
+
+    ion-chip[color="tertiary"] {
+      --background: linear-gradient(135deg, #ec4899, #db2777);
+    }
+
+    ion-chip[color="success"] {
+      --background: linear-gradient(135deg, #10b981, #047857);
+    }
+
+    ion-chip[color="warning"] {
+      --background: linear-gradient(135deg, #f59e0b, #d97706);
+    }
+  </style>
+</ion-content>

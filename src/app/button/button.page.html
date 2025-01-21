@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="secondary">
+      <ion-buttons slot="start">
+        <ion-back-button default-href="/login"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <div class="button-container">
+    <!-- Primer tipo de botón con icono -->
+    <ion-button size="small" color="primary">
+      <ion-icon slot="icon-only" ios="logo-apple" md="settings-sharp"></ion-icon>
+    </ion-button>
+
+    <ion-button color="secondary">
+      <ion-icon slot="icon-only" ios="logo-apple" md="settings-sharp"></ion-icon>
+    </ion-button>
+
+    <ion-button size="large" color="tertiary">
+      <ion-icon slot="icon-only" ios="logo-apple" md="settings-sharp"></ion-icon>
+    </ion-button>
+
+    <!-- Segundo tipo de botón con icono a la izquierda -->
+    <ion-button size="small" color="success">
+      <ion-icon slot="start" name="star"></ion-icon>
+      Icono Izquierdo
+    </ion-button>
+
+    <ion-button color="warning">
+      <ion-icon slot="start" name="star"></ion-icon>
+      Icono Izquierdo
+    </ion-button>
+
+    <ion-button size="large" color="danger">
+      <ion-icon slot="start" name="star"></ion-icon>
+      Icono Izquierdo
+    </ion-button>
+
+    <!-- Tercer tipo de botón con icono a la derecha -->
+    <ion-button size="small" color="light">
+      Icono Derecho
+      <ion-icon slot="end" name="heart"></ion-icon>
+    </ion-button>
+
+    <ion-button color="dark">
+      Icono Derecho
+      <ion-icon slot="end" name="heart"></ion-icon>
+    </ion-button>
+
+    <ion-button size="large" color="medium">
+      Icono Derecho
+      <ion-icon slot="end" name="heart"></ion-icon>
+    </ion-button>
+  </div>
+
+  <style>
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    ion-button {
+      --border-radius: 12px;
+      --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --background: linear-gradient(45deg, #3b82f6, #9333ea); /* Gradiente de color por defecto */
+      --color: white;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+
+    ion-button:hover {
+      transform: translateY(-2px);
+      --box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    ion-button:active {
+      transform: translateY(0);
+      --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    ion-icon {
+      font-size: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    ion-button:hover ion-icon {
+      transform: rotate(10deg) scale(1.1);
+    }
+
+    ion-button[size="small"] {
+      --padding-start: 8px;
+      --padding-end: 8px;
+      --height: 36px;
+    }
+
+    ion-button[size="large"] {
+      --padding-start: 16px;
+      --padding-end: 16px;
+      --height: 56px;
+    }
+  </style>
+</ion-header>

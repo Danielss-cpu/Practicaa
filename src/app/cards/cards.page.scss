@@ -1,0 +1,25 @@
+/* Estilos generales */
+ion-content {
+    padding: 10px;
+  }
+  
+  /* Tarjetas */
+  ion-card {
+    margin-bottom: 15px;
+    border: 1px solid #007bff; /* Solo borde azul */
+    border-radius: 8px;
+  }
+  
+  /* Encabezado de las tarjetas */
+  ion-card-header {
+    background-color: #007bff; /* Azul */
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Contenido de las tarjetas */
+  ion-card-content {
+    padding: 10px;
+  }
+  

@@ -1,0 +1,53 @@
+/* Barra de herramientas principal */
+ion-header {
+  background-color: #007bff; /* Azul */
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+ion-toolbar {
+  background-color: #007bff; /* Azul */
+  padding: 10px;
+}
+
+ion-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Estilo del contenido */
+ion-content {
+  padding: 20px;
+  background-color: #f9f9f9; /* Fondo claro */
+}
+
+/* Separación entre las secciones */
+.section {
+  margin-bottom: 20px;
+}
+
+/* Estilo de los botones */
+ion-button {
+  background-color: #007bff; /* Azul */
+  color: white;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+ion-button:focus, ion-button:active {
+  background-color: #0056b3; /* Azul más oscuro al hacer clic */
+}
+
+/* Barra inferior */
+ion-footer {
+  background-color: #007bff; /* Azul */
+  color: white;
+  padding: 10px;
+}
+
+/* Barra de búsqueda */
+ion-searchbar {
+  margin-top: 15px;
+}

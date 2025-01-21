@@ -1,0 +1,13 @@
+ion-chip {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+  
+  /* Efecto hover */
+  ion-chip:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  

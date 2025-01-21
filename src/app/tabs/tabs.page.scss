@@ -1,0 +1,32 @@
+ion-tabs {
+  --background: #fff;
+}
+
+ion-header {
+  background-color: #3880ff;
+}
+
+ion-toolbar {
+  --background: #3880ff;
+}
+
+ion-title {
+  color: white;
+}
+
+ion-content {
+  padding: 10px;
+}
+
+ion-tab-button {
+  font-size: 12px;
+}
+
+ion-tab-bar {
+  background-color: transparent;
+}
+
+ion-tab-button[selected] {
+  background-color: #3880ff;
+  color: white;
+}
