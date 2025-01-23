@@ -19,22 +19,24 @@
       </ion-card-header>
                                          
       <ion-card-content>
-        <ion-list>
-          <ion-item lines="full">
-            <ion-label position="floating">Nombre de Usuario</ion-label>
-            <ion-input type="text" [(ngModel)]="email"></ion-input>
-          </ion-item>
+        <form #Daniels="ngForm" (ngSubmit)="validateLogin(Daniels)">
+          <ion-list>
+            <ion-item lines="full">
+              <ion-label position="floating">Nombre de Usuario</ion-label>
+              <ion-input type="text" [(ngModel)]="email" name="email" required></ion-input>
+            </ion-item>
 
-          <ion-item lines="full">
-            <ion-label position="floating">Contraseña</ion-label>
-            <ion-input type="password" [(ngModel)]="password"></ion-input>
-          </ion-item>
-        </ion-list>
+            <ion-item lines="full">
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+            </ion-item>
+          </ion-list>
 
-        <div class="button-container">
-          <ion-button expand="block" color="primary" (click)="validateLogin()">Iniciar Sesión</ion-button>
-          <ion-button expand="block" fill="outline" color="secondary">Registrarse</ion-button>
-        </div>
+          <div class="button-container">
+            <ion-button expand="block" color="primary" type="submit">Iniciar Sesión</ion-button>
+            <ion-button expand="block" fill="outline" color="secondary">Registrarse</ion-button>
+          </div>
+        </form>
       </ion-card-content>
     </ion-card>
   </div>
