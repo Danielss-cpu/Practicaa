@@ -17,22 +17,22 @@
         <ion-card-title>Bienvenido</ion-card-title>
         <ion-card-subtitle>Por favor, ingresa tus credenciales</ion-card-subtitle>
       </ion-card-header>
-
+                                         
       <ion-card-content>
         <ion-list>
           <ion-item lines="full">
             <ion-label position="floating">Nombre de Usuario</ion-label>
-            <ion-input type="text" placeholder=></ion-input>
+            <ion-input type="text" [(ngModel)]="email"></ion-input>
           </ion-item>
 
           <ion-item lines="full">
             <ion-label position="floating">Contraseña</ion-label>
-            <ion-input type="password" placeholder=></ion-input>
+            <ion-input type="password" [(ngModel)]="password"></ion-input>
           </ion-item>
         </ion-list>
 
         <div class="button-container">
-          <ion-button expand="block" color="primary" routerLink="/inicio">Iniciar Sesión</ion-button>
+          <ion-button expand="block" color="primary" (click)="validateLogin()">Iniciar Sesión</ion-button>
           <ion-button expand="block" fill="outline" color="secondary">Registrarse</ion-button>
         </div>
       </ion-card-content>
