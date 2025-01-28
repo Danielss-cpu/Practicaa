@@ -1,0 +1,99 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Registrarse</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="register-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Crear Cuenta</ion-card-title>
+        <ion-card-subtitle>Por favor, llena los siguientes campos</ion-card-subtitle>
+      </ion-card-header>
+                                         
+      <ion-card-content>
+        <form #registerForm="ngForm" (ngSubmit)="onRegister(registerForm)">
+          <ion-list>
+            <ion-item lines="full">
+              <ion-label position="floating">Nombre</ion-label>
+              <ion-input type="text" [(ngModel)]="nombre" name="nombre" required></ion-input>
+            </ion-item>
+
+            <ion-item lines="full">
+              <ion-label position="floating">Teléfono</ion-label>
+              <ion-input type="tel" [(ngModel)]="telefono" name="telefono" required></ion-input>
+            </ion-item>
+
+            <ion-item lines="full">
+              <ion-label position="floating">Correo Electrónico</ion-label>
+              <ion-input type="email" [(ngModel)]="correo" name="correo" required></ion-input>
+            </ion-item>
+
+            <ion-item lines="full">
+              <ion-label position="floating">Confirmar Correo Electrónico</ion-label>
+              <ion-input type="email" [(ngModel)]="confirmarCorreo" name="confirmarCorreo" required></ion-input>
+            </ion-item>
+
+            <ion-item lines="full">
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input type="password" [(ngModel)]="contrasena" name="contrasena" required></ion-input>
+            </ion-item>
+
+            <ion-item lines="full">
+              <ion-label position="floating">Confirmar Contraseña</ion-label>
+              <ion-input type="password" [(ngModel)]="confirmarContrasena" name="confirmarContrasena" required></ion-input>
+            </ion-item>
+          </ion-list>
+
+          <div class="button-container">
+            <ion-button expand="block" color="primary" type="submit">Registrarse</ion-button>
+          </div>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<style>
+  .register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    background-color: #1e1e1e; 
+  }
+
+  ion-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #2c2c2c; 
+  }
+
+  ion-card-title,
+  ion-card-subtitle {
+    color: #fff;
+  }
+
+  ion-item {
+    margin-bottom: 15px; 
+  }
+
+  .button-container ion-button {
+    margin-top: 10px; 
+  }
+
+  ion-button {
+    font-weight: bold;
+  }
+</style>

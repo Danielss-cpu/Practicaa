@@ -13,20 +13,12 @@ export class LoginPage implements OnInit {
   email: string = "";
   password: string = "";
 
-  constructor(
-    private navController: NavController
-  ) { 
-   
-  }
+  constructor(private navController: NavController) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  
+  // Método para manejar el inicio de sesión
   validateLogin(form: NgForm) {
-    console.log(form.value); // Obtener los valores del formulario
-    console.log("Valid:", form.valid); // Validar formulario 
-
     if (!form.valid) {
       console.log("Todos los campos son requeridos");
       return;
@@ -35,11 +27,19 @@ export class LoginPage implements OnInit {
     const email = form.value.email;
     const password = form.value.password;
 
-    if (email === 'admin' && password === 'admin') {
+    // Obtener las credenciales registradas
+    const registeredEmail = localStorage.getItem('registeredEmail');
+    const registeredPassword = localStorage.getItem('registeredPassword');
+
+    // Validar credenciales
+    if (
+      (email === 'admin' && password === 'admin') ||
+      (email === registeredEmail && password === registeredPassword)
+    ) {
+      console.log("Inicio de sesión exitoso");
       this.navController.navigateForward('/inicio');
     } else {
-      console.log('Login incorrecto');
+      console.log("Credenciales incorrectas");
     }
   }
-
 }
